@@ -32,8 +32,8 @@
   (qname-uri [s]
     (.getNamespaceURI (parse-qname s))))
 
-(definline decode-uri [ns]
-  `(URLDecoder/decode ~ns "UTF-8"))
+(definline decode-uri [^String ns]
+  `(URLDecoder/decode ^String ~ns "UTF-8"))
 
-(definline encode-uri [uri]
-  `(URLEncoder/encode ~uri "UTF-8"))
+(definline encode-uri [^String uri]
+  `(URLEncoder/encode ^String ~uri "UTF-8"))
